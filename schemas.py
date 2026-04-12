@@ -25,8 +25,9 @@ class UserCreate(BaseModel):
 class UserResponse(BaseModel):
     id:int
     username:str
-
+    tasks:list[TaskResponse] = []
     class Config:
         orm_mode=True
+
 
 
